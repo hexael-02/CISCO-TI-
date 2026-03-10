@@ -1,3 +1,5 @@
+router:
+
 en
 config t
 hostname R-65
@@ -20,7 +22,8 @@ end
 copy running-config startup-config
  
 
-cambios para switch
+switch:
+
 en
 config t
 hostname SW-65
@@ -39,8 +42,29 @@ service password-encryption
 interface vlan1
 ip address 192.168.10.2 255.255.255.0
 no shut down
-ip default-gateway 192.168.10.1 255.255.255.0
+exit
+ip default-gateway 192.168.10.1 
 end 
 copy running-config startup-config
+
+
+configuracion del accesspoint 
+
+Jose Espinal 
+CISCO1234
+
+
+todas las ip 
+
+192.168.10.0
+192.168.10.1 router
+192.168.10.2 switch
+192.168.10.3 pc0
+192.168.10.4 pc1
+192.168.10.5 laptop1 pt
+192.168.10.6 smartphone
+192.168.10.7 pc2
+192.168.10.8 laptop1 pt
+192.168.10.10 laptop2 
 
 
