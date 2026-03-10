@@ -1,0 +1,46 @@
+en
+config t
+hostname R-65
+no ip domain-lookup
+banner motd #acceso restringido por Jose Espinal#
+enable secret class
+line console 0
+password cisco 
+login
+exit
+line vty 0 4
+password cisco 
+login
+exit
+service password-encryption
+interface g0/0/0
+ip address 192.168.10.1 255.255.255.0
+no shut down
+end 
+copy running-config startup-config
+ 
+
+cambios para switch
+en
+config t
+hostname SW-65
+no ip domain-lookup
+banner motd #acceso restringido por Jose Espinal#
+enable secret class
+line console 0
+password cisco 
+login
+exit
+line vty 0 15
+password cisco 
+login
+exit
+service password-encryption
+interface vlan1
+ip address 192.168.10.2 255.255.255.0
+no shut down
+ip default-gateway 192.168.10.1 255.255.255.0
+end 
+copy running-config startup-config
+
+
